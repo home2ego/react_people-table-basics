@@ -1,6 +1,6 @@
-import { PersonOmit } from '../types';
+import { Person, PersonOmit } from '../types';
 
-export default function getPreparedPeople(people: PersonOmit[]) {
+export default function getPreparedPeople(people: PersonOmit[]): Person[] {
   return people.map(person => {
     const mother = people.find(
       currentPerson => currentPerson.name === person.motherName,
